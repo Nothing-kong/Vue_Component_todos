@@ -2,7 +2,7 @@
   <div>
     <h2>Blog列表</h2>
     <ul>
-      <Blog v-for="(blog, index) in blogs" :key="blog.id" :blog='blog'/>
+      <Blog v-for="(blog, index) in blogs" :key="blog.id" :blogg='blog'/>
     </ul>
   </div>
 </template>
@@ -27,7 +27,7 @@ import Blog from './Blog'
   }
 
 </script>
-
+/*scoped:限定当前组件的样式只对当前组件有效, 对外部和内部的其它组件无效*/
 <style scoped>
 h2{
   color:aqua

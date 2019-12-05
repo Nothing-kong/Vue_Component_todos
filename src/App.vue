@@ -7,6 +7,7 @@
 
 <script type="text/ecmascript-6">
 import Blogs from './components/Blogs'
+
   export default {//配置对象
   data() {
     return {
@@ -15,7 +16,7 @@ import Blogs from './components/Blogs'
   },
 
   components:{
-    Blogs
+    Blogs,
   }
   }
 </script>
