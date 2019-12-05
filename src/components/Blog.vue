@@ -1,12 +1,12 @@
 <template>
   <li>
-    <h2>{{blogg.id}}--{{blogg.title}}</h2>
+    <h2>{{blog.id}}--{{blog.title}}</h2>
   </li>
 </template>
 
 <script type="text/ecmascript-6">
   export default {
-    props:['blogg'],
+    props:['blog'],
 
   }
 </script>
