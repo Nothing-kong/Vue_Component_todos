@@ -1,8 +1,8 @@
 <template>
   <li>
     <label>
-      <input type="checkbox"/>
-      <span>xxxxx</span>
+      <input type="checkbox" v-model="todo.complated"/>
+      <span>{{todo.name}}</span>
     </label>
     <button class="btn btn-danger" style="display:none">删除</button>
   </li>
@@ -10,6 +10,9 @@
 
 <script type="text/ecmascript-6">
   export default {
+    props:{
+      todo:Object,
+    }
   }
 </script>
 
