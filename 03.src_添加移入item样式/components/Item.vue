@@ -4,7 +4,7 @@
       <input type="checkbox" v-model="todo.completed"/>
       <span>{{todo.title}}</span>
     </label>
-    <button class="btn btn-danger" v-show="isShow" @click='deleteItem'>删除</button>
+    <button class="btn btn-danger" v-show="isShow">删除</button>
   </li>
 </template>
 
@@ -18,8 +18,6 @@
     },
     props:{
       todo:Object,
-      deleteTodo:Function,
-      index:Number
     },
     methods: {
       handleEnter(isEnter){
@@ -29,11 +27,6 @@
         } else {
           this.bgColor= '#ffffff',
           this.isShow= false
-        }
-      },
-      deleteItem () {
-        if (window.confirm('是否确定删除')) {
-          this.deleteTodo(this.index)
         }
       }
     },

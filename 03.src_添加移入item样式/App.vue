@@ -2,7 +2,7 @@
 <div class="todo-container">
   <div class="todo-wrap">
      <Header :addTodo='addTodo'/>
-     <List :todos='todos' :deleteTodo='deleteTodo'/>
+     <List :todos='todos'/>
      <Footer/> 
   </div>
 </div>
@@ -27,9 +27,6 @@ import Footer from './components/Footer'
     methods: {
         addTodo(todo) {
           this.todos.unshift(todo)
-        },
-        deleteTodo (index){
-          this.todos.splice(index, 1)
         }
       },
   

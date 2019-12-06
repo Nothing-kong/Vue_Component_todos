@@ -1,13 +1,13 @@
 <template>
   <ul class="todo-main">
-    <Item v-for="(todo,index) in todos" :key='todo.id' :todo='todo' :deleteTodo="deleteTodo" :index='index'/>
+    <Item v-for="(todo,index) in todos" :key='todo.id' :todo='todo'/>
   </ul>
 </template>
 
 <script type="text/ecmascript-6">
 import Item from './Item'
   export default {
-    props:['todos','deleteTodo'],
+    props:['todos'],
     components:{
       Item
     }
