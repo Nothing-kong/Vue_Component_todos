@@ -12,6 +12,7 @@
 import Header from './components/Header'
 import List from './components/List'
 import Footer from './components/Footer'
+import {saveTodos,readTodos} from './utils/storageUyils'
   export default {//配置对象
     data(){
       return {
@@ -28,7 +29,7 @@ import Footer from './components/Footer'
       //模拟异步读取数据
       setTimeout(() => {
         //读取local中保存的todos，更新数据
-       this.todos = JSON.parse(localStorage.getItem('todos_key') || '[]')
+       this.todos = readTodos()
       }, 1000);
     },
     methods: {
@@ -48,9 +49,10 @@ import Footer from './components/Footer'
     watch:{
         todos:{
           deep:true,//深度监视（本事及内部所有层次的数据）
-          handler(value){
-            localStorage.setItem('todos_key',JSON.stringify(value))
-          }
+          // handler(value){
+          //   saveTodos(value)
+          // }
+          handler:saveTodos
         }
     },
     components:{

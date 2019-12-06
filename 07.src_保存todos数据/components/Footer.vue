@@ -23,10 +23,10 @@
       },
 
       isCheckAll:{
-        get(){
+        get(){//读取属性会自动调用对应的getter方法
           return this.todos.length === this.completeSize && this.completeSize>0
         },
-        set(value){
+        set(value){//value代表当前勾选状态的Boolean值
           this.checkAll(value)
         }
       }
