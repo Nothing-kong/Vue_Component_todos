@@ -71,7 +71,7 @@ module.exports = {
   
   //引入模块解析
   resolve:{
-    extensions:['.js','.vue','.json'],//可以省略的后缀
+    extensions:['.js','.vue','.json'],//可以省略的扩展名
     alias:{//路径别名（简写方式）
       'vue$':'vue/dist/vue.esm.js',//表示精准匹配
     }

@@ -5,7 +5,7 @@ import App from './App'//引入自定义组件
 //注册全局组件
 //Vue.component('App',App)
 
-
+Vue.config.productionTip=false
 
 new Vue({
    el:'#root',
