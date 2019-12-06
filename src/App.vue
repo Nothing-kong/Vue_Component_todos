@@ -3,7 +3,7 @@
   <div class="todo-wrap">
      <Header :addTodo='addTodo'/>
      <List :todos='todos' :deleteTodo='deleteTodo'/>
-     <Footer/> 
+     <Footer :todos="todos" :clearCompletedTodos='clearCompletedTodos' :checkAll='checkAll'/> 
   </div>
 </div>
 </template>
@@ -30,6 +30,12 @@ import Footer from './components/Footer'
         },
         deleteTodo (index){
           this.todos.splice(index, 1)
+        },
+        clearCompletedTodos(){
+          this.todos = this.todos.filter((todo,index) => !todo.completed)
+        },
+        checkAll(isCheckAll){
+          this.todos.forEach( todo=> todo.completed = isCheckAll)
         }
       },
   
