@@ -61,7 +61,7 @@ module.exports = {
   ],
   //配置开发服务器
   devServer: {
-    port:8088,
+    port:8088,//服务器端口
     open: true, // 自动打开浏览器
     quiet: true, // 不做太多日志输出
   },
