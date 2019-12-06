@@ -2,7 +2,7 @@
   <li>
     <label>
       <input type="checkbox" v-model="todo.complated"/>
-      <span>{{todo.name}}</span>
+      <span>{{todo.title}}</span>
     </label>
     <button class="btn btn-danger" style="display:none">删除</button>
   </li>

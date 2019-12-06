@@ -16,10 +16,10 @@ import Footer from './components/Footer'
     data(){
       return {
         todos:[
-          {id:1,name:'A',complated:false},
-          {id:2,name:'B',complated:true},
-          {id:3,name:'C',complated:false},
-          {id:4,name:'D',complated:true},
+          {id:1,title:'A',complated:false},
+          {id:2,title:'B',complated:true},
+          {id:3,title:'C',complated:false},
+          {id:4,title:'D',complated:true},
         ]
       }
       
