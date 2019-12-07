@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>自定义全局事件总线</title>
+</head>
+<body>
+<script type="text/javascript" src="./event-bus.js"></script>
+<script type="text/javascript">
+    eventBus.on('add',(data) => {
+    console.log('add1()',data)
+    })
+
+    eventBus.on('add',(data) => {
+      console.log('add2()',data)
+    })
+
+    eventBus.on('delete',(data) => {
+      console.log('delete()',data)
+    })
+
+    eventBus.off('add')
+
+    // eventBus.off()
+
+    eventBus.emit('add','atguigu')
+
+    eventBus.emit('delete','baidu')
+
+</script>
+</body>
+</html>
