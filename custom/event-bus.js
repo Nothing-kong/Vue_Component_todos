@@ -6,7 +6,7 @@
 (function(window){
   const eventBus = {}
 
-  let callBacksObj = {}
+  let callbacksObj = {}
 
   //绑定事件监听
   eventBus.on = function (eventName,callback) {
@@ -39,5 +39,5 @@
       callbacksObj = {}
     }
   }
-  
+  window.eventBus = eventBus
 })(window)
