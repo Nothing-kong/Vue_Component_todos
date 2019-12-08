@@ -7,7 +7,7 @@ import App from './App'//引入自定义组件
 
 Vue.config.productionTip=false
 
-Vue.prototype.deletexxx = new Vue()
+Vue.prototype.globalEventBus = new Vue()
 
 new Vue({
    el:'#root',
