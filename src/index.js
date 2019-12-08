@@ -7,9 +7,14 @@ import App from './App'//引入自定义组件
 
 Vue.config.productionTip=false
 
-Vue.prototype.globalEventBus = new Vue()
+// Vue.prototype.globalEventBus = new Vue()
 
 new Vue({
+
+  beforeCreate() {
+    Vue.prototype.globalEventBus = this
+  },
+  
    el:'#root',
     
    //注册局部组件
