@@ -33,8 +33,8 @@ import {saveTodos,readTodos} from './utils/storageUyils'//数据存储工具模�
       this.$refs.header.$on('addTodo', this.addTodo)
 
 
-      //删除事件绑定事件监听
-      this.deletexxx.$on('deleteTodo',this.deleteTodo)
+      //通过globalEventBus绑定删除事件的事件监听
+      this.globalEventBus.$on('deleteTodo',this.deleteTodo)
 
       //模拟异步读取数据
       setTimeout(() => {
