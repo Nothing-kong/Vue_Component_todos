@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>自定义PubSub</title>
+</head>
+<body>
+  <!-- <script type="text/javascript" src="https://cdn.bootcss.com/pubsub-js/1.7.0/pubsub.js"></script> -->
+  <script src="./pubsub.js"></script>
+  <script type="text/javascript">
+  /* 
+    PubSub的语法:
+    1. token subscribe(msgName, callback): 订阅消息, 并返回一个标识token
+    2. publish(msgName, data): 异步发布消息
+    3. publishSync(msgName, data): 同步发布消息
+    4. unsubscribe(flag): 根据flag取消订阅
+    */
+
+    //消息订阅
+    PubSub.subscribe('add',(msg, data) => {
+      console.log('add1()', data)
+    })
+
+    const token = PubSub.subscribe('add',(msg, data) => {
+      console.log('add2()', data)
+    })
+
+    PubSub.subscribe('delete',(msg, data) => {
+      console.log('delete()', data)
+    })
+    //取消订阅
+    // PubSub.unsubscribe(token)
+    // PubSub.unsubscribe('add')
+
+
+    //异步发布消息
+    PubSub.publish('add', 'alibaba')
+    PubSub.publish('delete', 'taobao')
+    PubSub.publishSync('add', 'atguigu')
+    console.log('pubsub()之后')
+    
+  </script>
+</body>
+</html>
