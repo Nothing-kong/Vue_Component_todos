@@ -18,6 +18,7 @@
     },
     props:{
       todo:Object,
+      deleteTodo:Function,
       index:Number,
       updateTodo:Function
     },
@@ -33,10 +34,7 @@
       },
       deleteItem () {
         if (window.confirm('是否确定删除')) {
-          // this.deleteTodo(this.index)
-
-          //通过deletexxx分发事件
-          this.deletexxx.$emit('deleteTodo',this.index)
+          this.deleteTodo(this.index)
         }
       }
     },

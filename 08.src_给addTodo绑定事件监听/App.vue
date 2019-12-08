@@ -4,7 +4,7 @@
     <!-- 给当前header对象绑定自定义事件监听 -->
      <!--<Header @addTodo='addTodo'/>-->
      <Header ref='header'/>
-     <List :todos='todos' :updateTodo='updateTodo'/>
+     <List :todos='todos' :deleteTodo='deleteTodo' :updateTodo='updateTodo'/>
      <Footer :todos="todos" :clearCompletedTodos='clearCompletedTodos' :checkAll='checkAll'/> 
   </div>
 </div>
@@ -28,13 +28,8 @@ import {saveTodos,readTodos} from './utils/storageUyils'//数据存储工具模�
       }
     },
     mounted(){
-      
       //给header绑定事件监听
       this.$refs.header.$on('addTodo', this.addTodo)
-
-
-      //通过deletexxx绑定删除事件的事件监听
-      this.deletexxx.$on('deleteTodo',this.deleteTodo)
 
       //模拟异步读取数据
       setTimeout(() => {

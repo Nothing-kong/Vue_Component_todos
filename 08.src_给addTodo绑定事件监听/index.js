@@ -7,11 +7,9 @@ import App from './App'//引入自定义组件
 
 Vue.config.productionTip=false
 
-Vue.prototype.deletexxx = new Vue()
-
 new Vue({
    el:'#root',
-    
+
    //注册局部组件
    components:{
      App:App
