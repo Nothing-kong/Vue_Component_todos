@@ -9,21 +9,23 @@
 <body>
 <script type="text/javascript" src="./event-bus.js"></script>
 <script type="text/javascript">
+
     eventBus.on('add',(data) => {
-    console.log('add1()',data)
+    console.log('add',data)
     })
 
     eventBus.on('add',(data) => {
-      console.log('add2()',data)
+      console.log('add2',data)
     })
 
     eventBus.on('delete',(data) => {
-      console.log('delete()',data)
+      console.log('delete',data)
     })
 
-    eventBus.off('add')
+    // eventBus.off('add')
+    // eventBus.off('delete')
 
-    // eventBus.off()
+    //eventBus.off()
 
     eventBus.emit('add','atguigu')
 
